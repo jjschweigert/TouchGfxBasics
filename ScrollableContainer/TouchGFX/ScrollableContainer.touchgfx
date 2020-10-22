@@ -1,0 +1,204 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Type": "Box",
+            "Color": {
+              "Red": 66,
+              "Green": 66,
+              "Blue": 66
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Box",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Name": "backgroundBox",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "Image",
+            "RelativeFilename": "scroll_bg.png",
+            "Alpha": 255,
+            "Name": "backgroundImage",
+            "X": 160,
+            "Y": 148,
+            "Width": 480,
+            "Height": 272,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "Type": "TextArea",
+                "TextId": "Lorem_ipsum",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Alpha": 255,
+                "AutoSize": true,
+                "LineSpacing": 0,
+                "Name": "longTxt",
+                "X": 0,
+                "Y": 0,
+                "Width": 479,
+                "Height": 696,
+                "Visible": true,
+                "LockPosition": false,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "Type": "ScrollableContainer",
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": false,
+            "ScrollbarsColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "ScrollbarsAlpha": 255,
+            "Name": "scrollableContainer1",
+            "X": 204,
+            "Y": 192,
+            "Width": 392,
+            "Height": 184,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 330,
+            "Y": 54,
+            "Width": 141,
+            "Height": 24,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "Screen1",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "Lorem_ipsum",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      }
+    ],
+    "Name": "STM32F769I_DISCO",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F769I_DISCO.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape"
+  },
+  "Version": "4.15.0",
+  "CreatedBy": "4.15.0"
+}
